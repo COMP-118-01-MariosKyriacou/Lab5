@@ -49,15 +49,11 @@ namespace Lab5UnitTesting
 
 			// Assert
 			Assert::IsNotNull(newMatrix);
-			Assert::AreEqual(1.0, newMatrix[0][0]);
-			Assert::AreEqual(2.0, newMatrix[1][0]);
-			Assert::AreEqual(3.0, newMatrix[2][0]);
-			Assert::AreEqual(6.0, newMatrix[0][1]);
-			Assert::AreEqual(7.0, newMatrix[1][1]);
-			Assert::AreEqual(8.0, newMatrix[2][1]);
-			Assert::AreEqual(11.0, newMatrix[0][2]);
-			Assert::AreEqual(12.0, newMatrix[1][2]);
-			Assert::AreEqual(13.0, newMatrix[2][2]);
+			for (int i = 0; i < maxRow; i++) {
+				for (int j = 0; j < Globals::MAX_COL; j++) {
+					Assert::AreEqual(matrix[j][i], newMatrix[i][j]);
+				}
+			}
 		}
 	};
 }
