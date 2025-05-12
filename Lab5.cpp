@@ -3,7 +3,7 @@
  * \brief Prompt menu to user and run action with Unit Tests
  * \details In this program, we prompt a user to select an option from a menu and then we find the proper action through a switch statement. There is also data validation checks in order to ensure that there won't be a non-valid option selection. This is a copy of Lab 4, in order to implement unit tests
  * \author Marios Kyriacou (U244N0037)
- * \date 2025
+ * \date 05/2025
  * \version 0.1
  * \copyright GNU Public License
  */
