@@ -39,7 +39,8 @@ int main() {
         std::cout << "6) Get the biggest value within the Matrix" << std::endl;
         std::cout << "7) Get the transposed matrix" << std::endl;
         std::cout << "8) Get the average of the elements within the matrix" << std::endl;
-        std::cout << "9) Exit" << std::endl;
+        std::cout << "9) Find the largest number within the Matrix" << std::endl;
+        std::cout << "10) Exit" << std::endl;
 
         // Prompt user to select option
         std::cout << "Enter which option you'd like: ";
@@ -102,10 +103,13 @@ int main() {
             std::cout << "The average of all the elements combined is: " << averageOfElements(matrix, ROWS) << std::endl;
             break;
         case 9:
+			std::cout << "The largest number in the matrix is: " << findLargest(matrix, ROWS) << std::endl;
+            break;
+        case 10:
         default:
             break;
         }
-    } while (option != 9);
+    } while (option != 10);
 
     return 0;
 }

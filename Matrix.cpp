@@ -132,3 +132,24 @@ double averageOfElements(const double matrix[][Globals::MAX_COL], const int maxR
 
     return total / (maxRow * Globals::MAX_COL);
 }
+
+/**
+ * In this function, we will check all of the numbers inside the matrix array and return the
+ * largest one
+ * @param matrix A constant variable of the matrix table
+ * @param maxRow A constant variable of the maximum amount of rows in the array
+ * @return Returns the largest number within the matrix array
+*/
+double findLargest(const double matrix[][Globals::MAX_COL], const int maxRow) {
+    double largest = matrix[0][0];
+
+    for (int i = 1; i < maxRow; i++) {
+        for (int j = 0; j < Globals::MAX_COL; j++) {
+			if (largest < matrix[i][j]) {
+				largest = matrix[i][j];
+			}
+        }
+    }
+
+    return largest;
+}
