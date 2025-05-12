@@ -20,6 +20,6 @@ void printMatrix(const double[][Globals::MAX_COL], const int);
 double maximumValue(const double[][Globals::MAX_COL], const int);
 void transposedMatrix(const double[][Globals::MAX_COL], double[][Globals::MAX_COL], const int);
 double averageOfElements(const double[][Globals::MAX_COL], const int);
-double findLargest(const double[][Globals::MAX_COL], const int);
+double findLargest(const double[], const int);
 
 #endif

@@ -47,8 +47,8 @@ int main() {
         std::cin >> option;
 
         // Data validation
-        while (option < 1 || option > 9) {
-            std::cout << "Please enter an option between 1 and 9: ";
+        while (option < 1 || option > 10) {
+            std::cout << "Please enter an option between 1 and 10: ";
             std::cin >> option;
         }
 
@@ -103,7 +103,19 @@ int main() {
             std::cout << "The average of all the elements combined is: " << averageOfElements(matrix, ROWS) << std::endl;
             break;
         case 9:
-			std::cout << "The largest number in the matrix is: " << findLargest(matrix, ROWS) << std::endl;
+            int rowToCheck = 0;
+
+            // Prompt user to enter a row
+			std::cout << "Which row would you like to find the biggest number of? (0 - " << ROWS - 1 << "): ";
+            std::cin >> rowToCheck;
+
+            // Validate user input
+			while (rowToCheck < 0 || rowToCheck > ROWS - 1) {
+				std::cout << "Please provide a row between 0 and " << ROWS - 1 << ": ";
+				std::cin >> rowToCheck;
+			}
+
+			std::cout << "The largest number in the matrix is: " << findLargest(matrix[rowToCheck], 1) << std::endl;
             break;
         case 10:
         default:

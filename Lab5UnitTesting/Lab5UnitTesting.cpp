@@ -55,5 +55,19 @@ namespace Lab5UnitTesting
 				}
 			}
 		}
+
+		// Used to test the function findLargest which finds the largest number in the matrix
+		TEST_METHOD(FindLargestTest) {
+			// Arrange
+			const double matrix[3][Globals::MAX_COL] = { {1, 2, 3}, {6, 7, 8}, {11, 12, 13} };
+			const int maxRow = 3;
+
+			// Act
+			double result = findLargest(matrix[1], maxRow);
+
+			// Assert
+			Assert::AreNotEqual(7.0, result);
+			Assert::AreEqual(8.0, result);
+		}
 	};
 }
